@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements CompletionHandler
     RecyclerView recyclerView;
     RecyclerView.LayoutManager manager;
     RecyclerAdapter adapter;
-    checkNetwork check;
+    checkNetwork check=new checkNetwork();
     EditText searchBar;
     Button btnSelect;
     ProgressBar progress;
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements CompletionHandler
 
             }
         });
-        check=new checkNetwork(this,this);
+        check.isNetworkOnline(this,this);
 
 
     }

@@ -19,7 +19,10 @@ import com.example.andrej.primerprojekta.MainActivity;
 public class checkNetwork  extends BroadcastReceiver{
     CompletionHandler handler;
     //Checks if user connected to internet
-    public checkNetwork(final Context context, final CompletionHandler handler) {
+    public checkNetwork(){
+
+    }
+    public void isNetworkOnline(final Context context, final CompletionHandler handler) {
         this.handler=handler;
             ConnectivityManager cm =
                     (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
